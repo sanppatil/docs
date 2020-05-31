@@ -9,11 +9,11 @@
 
 ### Create topic
 ```console
- kafka-topics --create \ 
+ kafka-topics --create \
      --bootstrap-server localhost:9092 \
      --replication-factor 3 \
      --partitions 6 \  
-     --topic sample-topic 
+     --topic sample-topic
  ```
 
 ### Support or Contact
