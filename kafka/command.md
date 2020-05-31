@@ -35,7 +35,7 @@
  ```
 
 ### Find out all the partitions without a leader
-
+>Find out all the partitions where one or more of the replicas for the partition are not in-sync with the leader
 ```console
  kafka-topics --describe \
      --bootstrap-server localhost:9092 \
