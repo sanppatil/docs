@@ -1,11 +1,15 @@
 
 ## Kafka Commands
 
-> ### Display  list of topics 
->> ``` kafka-topics --bootstrap-server localhost:9092 --list ```
+### Display  list of topics 
+```console
+ kafka-topics --bootstrap-server localhost:9092 --list 
+ ```
 
-> ### Create topic
->> ``` kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 3 --partitions 6 --topic sample-topic ```
+### Create topic
+```console
+ kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 3 --partitions 6 --topic sample-topic 
+ ```
 
 ### Support or Contact
 
