@@ -1,9 +1,9 @@
 # Streaming
 
-## Kafka
+## Kafka Commands
 
 
-### [Commands](https://sanppatil.github.io/docs/kafka/command)
+### [Topic Commands](https://sanppatil.github.io/docs/kafka/topic-commands)
 
 
 ### Support or Contact
