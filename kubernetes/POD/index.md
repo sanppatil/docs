@@ -3,7 +3,7 @@
 
 ## Pod
 
-### Pod with Container Port:
+### Pod with Container Port
 
 ```yaml
 apiVersion: v1
@@ -18,7 +18,7 @@ spec:
     - containerPort: 7777
  ```
 
-### Pod with Commands and Args:
+### Pod with Commands and Args
 
 ```yaml
 apiVersion: v1
@@ -29,7 +29,7 @@ spec:
   containers:
   - name: busybox
     image: busybox
-    command: 
+    command:
     - echo
     args:
     - Hello World

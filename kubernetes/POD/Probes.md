@@ -1,5 +1,5 @@
 
-# Kubernetes
+# [Kubernetes](../index)
 
 ## [Pod](./index)
 
@@ -82,5 +82,4 @@ spec:
 
 ### Readiness Probe
 
-> 	Determines whether the container is ready to serve requests - Requests will not be forwarded to the container until the readiness probe succeeds.
-
+> Determines whether the container is ready to serve requests - Requests will not be forwarded to the container until the readiness probe succeeds.
