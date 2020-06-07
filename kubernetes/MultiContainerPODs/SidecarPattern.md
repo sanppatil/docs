@@ -7,7 +7,7 @@
 
 #### Details
 
-![Sidecar Pattern](./images/sidecar-containers.png)
+<img src="./images/sidecar-containers.png" alt="Sidecar Pattern" title="Sidecar Pattern" height="300" />
 
 #### Use Case - Overview
 

@@ -7,7 +7,7 @@
 
 #### Details
 
-![Adapter Pattern](./images/adapter-containers.png)
+<img src="./images/adapter-containers.png" alt="Adapter Pattern" title="Adapter Pattern" height="300" />
 
 #### Use Case - Overview
 

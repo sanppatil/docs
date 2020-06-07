@@ -7,7 +7,7 @@
 
 #### Details
 
-![Ambassador Pattern](./images/ambassador-containers.png)
+<img src="./images/ambassador-containers.png" alt="Ambassador Pattern" title="Ambassador Pattern" height="300" />
 
 #### Use Case - Overview
 
