@@ -1,44 +1,86 @@
 
-# Commands for interacting with Topics
+# Kubernetes
 
-## Display list of topics
+## Pod
 
-```console
- kafka-topics --list \
-     --bootstrap-server localhost:9092
+### Liveness Probe
+
+> Determines whether the container is running properly - When a liveness probe fails, the container will be shut down or restarted, depending on its RestartPolicy.
+
+#### Exec Probe - Sample
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: exec-liveness
+spec:
+  containers:
+  - name: liveness
+    image: busybox
+    command:
+    - /bin/sh
+    - -c
+    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
+    livenessProbe:
+      exec:
+        command:
+        - cat
+        - /tmp/healthy
+      initialDelaySeconds: 5
+      periodSeconds: 5
  ```
 
-## Create topic
+#### Http Probe - Sample
 
-```console
- kafka-topics --create \
-     --bootstrap-server localhost:9092 \
-     --replication-factor 3 \
-     --partitions 6 \
-     --topic sample-topic
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: http-liveness
+spec:
+  containers:
+  - name: http-liveness
+    image: k8s.gcr.io/liveness
+    command:
+    - /server
+    livenessProbe:
+      httpGet:
+        path: /healthz
+        port: 8080
+        httpHeaders:
+        - name: Custom-Header
+          value: Awesome
+      periodSeconds: 3
+      initialDelaySeconds: 3
  ```
 
-## Describe topic
+#### TCP Probe - Sample
 
-```console
- kafka-topics --describe \
-     --bootstrap-server localhost:9092 \
-     --topic sample-topic
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tcp-liveness
+spec:
+  containers:
+  - name: goproxy
+    image: k8s.gcr.io/goproxy:0.1
+    ports:
+    - containerPort: 8080
+    readinessProbe:
+      tcpSocket:
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 10
+    livenessProbe:
+      tcpSocket:
+        port: 8080
+      initialDelaySeconds: 15
+      periodSeconds: 20
  ```
 
-## Delete topic
+### Readiness Probe
 
-```console
- kafka-topics --delete \
-     --bootstrap-server localhost:9092 \
-     --topic sample-topic
- ```
+> 	Determines whether the container is ready to serve requests - Requests will not be forwarded to the container until the readiness probe succeeds.
 
-## Find out all the partitions without a leader
->Find out all the partitions where one or more of the replicas for the partition are not in-sync with the leader
-```console
- kafka-topics --describe \
-     --bootstrap-server localhost:9092 \
-     --topic sample-topic \
-     --unavailable-partitions
- ```

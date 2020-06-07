@@ -1,5 +1,4 @@
 
-
 # Kubernetes
 
 ## Pod
@@ -8,11 +7,11 @@
 
 #### Important Points
 
-1. Defines a desired state for a set of replica pods, and works to maintain that state by creating, removing, and modifying those pods 
-	
-2.  While creating deployment, underlaying template schema exactly confirms to POD specs.
+1. Defines a desired state for a set of replica pods, and works to maintain that state by creating, removing, and modifying those pods
 
-3. The deployment will manage all pods whose labels match this selector. When creating a deployment, make sure the selector matches the pods on the template! 
+2. While creating deployment, underlaying template schema exactly confirms to POD specs.
+
+3. The deployment will manage all pods whose labels match this selector. When creating a deployment, make sure the selector matches the pods on the template!
 
 #### Deployment Example
 
@@ -41,7 +40,7 @@ spec:
 
 #### Kubectl commands for Rolling Updates/Rollbacks
 
-##### Change deployment image:
+##### Change deployment image
 
 ```console
 kubectl set image deployments/web-deployment web-container=node --record
