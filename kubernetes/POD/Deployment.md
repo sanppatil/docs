@@ -37,29 +37,34 @@ spec:
         - containerPort: 8080
  ```
 
-### Rolling Updates/Rollbacks
+### Kubectl commands for Rolling Updates/Rollbacks
 
-#### Command to change deployment image:
+#### Change deployment image:
+
 ```console
 kubectl set image deployments/web-deployment web-container=node --record
  ```
 
-#### Command to view deployment history
+#### View deployment history
+
 ```console
 kubectl rollout history deployments/web-deployment
 ```
 
-#### Command to rollback deployment
+#### Rollback deployment
+
 ```console
 kubectl rollout undo deployments/web-deployment --to-revision=1
 ```
 
-#### Command to view deployment details for specific revision
+#### View deployment details for specific revision
+
 ```console
 kubectl rollout history deployments/web-deployment --revision=2
 ```
 
-#### Command to check deployment status
+#### Check deployment status
+
 ```console
 kubectl rollout status deployments/candy-deployment
 ```
