@@ -1,32 +1,26 @@
 # Kubernetes
 
-## POD
+## [POD](./POD/index)
 
-## Job & CornJob
+## [Job & CornJob](./Job & CrobJob)
 
-## ConfigMap & Volumes
+## [ConfigMap & Volumes](./ConfigMap & Volumes)
 
-## Secret
+## [Secret](./Secret)
 
-## PersistentVolumes & PersistentVolumeClaims
+## [PersistentVolumes & PersistentVolumeClaims](./PersistentVolumes & PersistentVolumeClaims)
 
-## SecurityContext & ServiceAccount
+## [SecurityContext & ServiceAccount](./SecurityContext & ServiceAccount)
 
-## Resources
+## [Resources](./Resources)
 
-## Services
+## [Services](./Services)
 
-## NetworkPolicy
+## [NetworkPolicy](./NetworkPolicy)
 
-## Multi Container PODs
+## [Multi Container PODs](./Multi Container PODs)
 
-## Miscellaneous
-
-###  Sidecar Pattern
-
-### Ambassador Pattern
-
-### Adapter Pattern
+## [Miscellaneous](./Miscellaneous/index)
 
 ### Support or Contact
 
