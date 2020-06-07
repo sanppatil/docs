@@ -1,9 +1,8 @@
 
-# Topics
+# Kafka
 
-## [Kubernetes] (https://sanppatil.github.io/docs/kafka/index)
+## [Topic Commands](https://sanppatil.github.io/docs/kafka/topic-commands)
 
-## [Kafka] (https://sanppatil.github.io/docs/kafka/index)
 
 
 ### Support or Contact
