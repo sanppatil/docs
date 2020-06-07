@@ -1,44 +1,65 @@
 
-# Commands for interacting with Topics
 
-## Display list of topics
+# Kubernetes
 
-```console
- kafka-topics --list \
-     --bootstrap-server localhost:9092
+## Pod
+
+### Important Points
+
+1. Defines a desired state for a set of replica pods, and works to maintain that state by creating, removing, and modifying those pods 
+	
+2.  While creating deployment, underlaying template schema exactly confirms to POD specs.
+
+3. The deployment will manage all pods whose labels match this selector. When creating a deployment, make sure the selector matches the pods on the template! 
+
+### Deployment Example
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      name: web-pod
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web-container
+        image: nginx
+        ports:
+        - containerPort: 8080
  ```
 
-## Create topic
+### Rolling Updates/Rollbacks
 
+#### Command to change deployment image:
 ```console
- kafka-topics --create \
-     --bootstrap-server localhost:9092 \
-     --replication-factor 3 \
-     --partitions 6 \
-     --topic sample-topic
+kubectl set image deployments/web-deployment web-container=node --record
  ```
 
-## Describe topic
-
+#### Command to view deployment history
 ```console
- kafka-topics --describe \
-     --bootstrap-server localhost:9092 \
-     --topic sample-topic
- ```
+kubectl rollout history deployments/web-deployment
+```
 
-## Delete topic
-
+#### Command to rollback deployment
 ```console
- kafka-topics --delete \
-     --bootstrap-server localhost:9092 \
-     --topic sample-topic
- ```
+kubectl rollout undo deployments/web-deployment --to-revision=1
+```
 
-## Find out all the partitions without a leader
->Find out all the partitions where one or more of the replicas for the partition are not in-sync with the leader
+#### Command to view deployment details for specific revision
 ```console
- kafka-topics --describe \
-     --bootstrap-server localhost:9092 \
-     --topic sample-topic \
-     --unavailable-partitions
- ```
+kubectl rollout history deployments/web-deployment --revision=2
+```
+
+#### Command to check deployment status
+```console
+kubectl rollout status deployments/candy-deployment
+```
