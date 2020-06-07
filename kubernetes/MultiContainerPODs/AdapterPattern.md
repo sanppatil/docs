@@ -30,12 +30,12 @@ spec:
     configMap:
       name: fluentd-config
   - name: log-output
-    hostPath: 
+    hostPath:
       path: /usr/ckad/log_output
   containers:
   - name: count
     image: busybox
-    command: 
+    command:
     - /bin/sh
     - -c
     - >

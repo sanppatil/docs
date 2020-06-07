@@ -59,4 +59,4 @@ listen http-in
 
 ```bash
 kubectl create configmap fruit-service-ambassador-config --from-file=haproxy.cfg
- ```
+```
