@@ -2,7 +2,7 @@
 
 ## [POD](./POD/index)
 
-## [Job & CornJob](./Job & CrobJob)
+## [Job & CornJob](./JobCrobJob)
 
 ## [ConfigMap](./ConfigMap)
 
@@ -20,7 +20,7 @@
 
 ## [Multi Container PODs](./MultiContainerPODs/index)
 
-## [Miscellaneous](./Miscellaneous/index)
+## [Miscellaneous](./Miscellaneous)
 
 ### Support or Contact
 
