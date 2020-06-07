@@ -4,7 +4,9 @@
 
 ## Pod
 
-### Important Points
+### Deployment
+
+#### Important Points
 
 1. Defines a desired state for a set of replica pods, and works to maintain that state by creating, removing, and modifying those pods 
 	
@@ -12,7 +14,7 @@
 
 3. The deployment will manage all pods whose labels match this selector. When creating a deployment, make sure the selector matches the pods on the template! 
 
-### Deployment Example
+#### Deployment Example
 
 ```yaml
 apiVersion: apps/v1
@@ -37,33 +39,33 @@ spec:
         - containerPort: 8080
  ```
 
-### Kubectl commands for Rolling Updates/Rollbacks
+#### Kubectl commands for Rolling Updates/Rollbacks
 
-#### Change deployment image:
+##### Change deployment image:
 
 ```console
 kubectl set image deployments/web-deployment web-container=node --record
  ```
 
-#### View deployment history
+##### View deployment history
 
 ```console
 kubectl rollout history deployments/web-deployment
 ```
 
-#### Rollback deployment
+##### Rollback deployment
 
 ```console
 kubectl rollout undo deployments/web-deployment --to-revision=1
 ```
 
-#### View deployment details for specific revision
+##### View deployment details for specific revision
 
 ```console
 kubectl rollout history deployments/web-deployment --revision=2
 ```
 
-#### Check deployment status
+##### Check deployment status
 
 ```console
 kubectl rollout status deployments/candy-deployment
