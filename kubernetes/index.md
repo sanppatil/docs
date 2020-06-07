@@ -18,7 +18,7 @@
 
 ## [NetworkPolicy](./NetworkPolicy)
 
-## [Multi-Container PODs](./Multi-Container-PODs)
+## [Multi Container PODs](./MultiContainerPODs/index)
 
 ## [Miscellaneous](./Miscellaneous/index)
 
