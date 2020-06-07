@@ -4,7 +4,7 @@
 
 ## [Job & CornJob](./Job & CrobJob)
 
-## [ConfigMap & Volumes](./ConfigMap & Volumes)
+## [ConfigMap](./ConfigMap)
 
 ## [Secret](./Secret)
 
