@@ -8,9 +8,9 @@
 
 ## [Secret](./Secret)
 
-## [PersistentVolumes & PersistentVolumeClaims](./PersistentVolumes & PersistentVolumeClaims)
+## [PersistentVolumes](./PersistentVolumes)
 
-## [SecurityContext & ServiceAccount](./SecurityContext & ServiceAccount)
+## [Security](./Security)
 
 ## [Resources](./Resources)
 
@@ -18,7 +18,7 @@
 
 ## [NetworkPolicy](./NetworkPolicy)
 
-## [Multi Container PODs](./Multi Container PODs)
+## [Multi-Container PODs](./Multi-Container-PODs)
 
 ## [Miscellaneous](./Miscellaneous/index)
 
