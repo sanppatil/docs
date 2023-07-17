@@ -32,3 +32,5 @@ kubectl exec -it <<name-of-pod>> -- /bin/sh
 - While creating Deployment, property name for selecting label is,  "selector" -> "matchLabels"
 
 - While creating NetworkPolicy, property name for selecting label is, "podSelector" -> "matchLabels"
+
+[back](./)

@@ -69,3 +69,5 @@ spec:
 ### ExternalName
 
 Service does not proxy traffic to pods, but simply provides DNS lookup for an external address. This allows components within the cluster to lookup external resources in the same way they look up internal ones, through services.
+
+[back](./)

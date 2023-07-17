@@ -22,6 +22,4 @@
 
 ## [Miscellaneous](./Miscellaneous)
 
-### Support or Contact
-
-Having trouble with Pages? [contact support](https://github.com/sanppatil) and we’ll help you sort it out..
+[back](./)

@@ -69,3 +69,5 @@ kubectl rollout history deployments/web-deployment --revision=2
 ```console
 kubectl rollout status deployments/candy-deployment
 ```
+
+[back](./)
